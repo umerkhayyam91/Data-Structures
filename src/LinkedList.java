@@ -1,5 +1,5 @@
 class Node {
-    int data;
+    String data; //int datatype not working
     Node next;
 }
 
@@ -21,9 +21,9 @@ public class LinkedList {
     }
 
     // to insert a node at beginning if the list//
-    void insertAtFront(int value) {
+    void insertAtFront(String data) {
         Node nn = new Node();
-        nn.data = value;
+        nn.data = data;
         if (isEmpty()) {
             start = nn;
             curr = start;
@@ -34,9 +34,9 @@ public class LinkedList {
     }
 
     // to insert a node at end if the list//
-    void insertAtEnd(int value) {
+    void insertAtEnd(String data) {
         Node nn = new Node();
-        nn.data = value;
+        nn.data = data;
 
         if (isEmpty()) {
             start = nn;
@@ -64,7 +64,7 @@ public class LinkedList {
     }
 
     // to delete a specific node from list//
-    void deleteNode(int key) {
+    void deleteNode(String key) {
         Node temp;
         temp = start;
         prev = null;
@@ -106,15 +106,37 @@ public class LinkedList {
 
     }
 
-    // main method//
-    public static void main(String[] args) {
-        LinkedList list = new LinkedList();
-        list.insertAtFront(5);
-        list.insertAtFront(7);
-        list.insertAtFront(8);
-        list.insertAtFront(10);
+    
 
-        list.print();
+    void search(String key) {
+        curr = start;
+        prev = null;
+        if (!isEmpty()) {
+            while (curr != null && curr.data != key) {
+                prev = curr;
+                curr = curr.next;
+            }
+            if (curr != null) {
+                System.out.println("value found");
+                System.out.println(curr);
+            } else {
+                System.out.println("Value not found");
+            }
+        } else {
+            System.out.println("list is empty");
+        }
     }
+
+
+// main method//
+// public static void main(String[] args) {
+// LinkedList list = new LinkedList();
+// list.insertAtEnd("3");
+// list.insertAtEnd("8");
+// list.insertAtEnd("1");
+// list.insertAtEnd("2");
+// list.destroyList();
+// list.print();
+// }
 
 }
