@@ -1,8 +1,3 @@
-class Node {
-    String data;
-    Node next;
-    Node prev;
-}
 
 public class DoublyLinkedList {
     Node head, tail;
@@ -11,7 +6,7 @@ public class DoublyLinkedList {
         return head == null;
     }
 
-    void addAtEnd(String data) {
+    void addAtEnd(int data) {
         Node newNode = new Node();
         newNode.data = data;
 
@@ -25,7 +20,7 @@ public class DoublyLinkedList {
         }
     }
 
-    void addAtFront(String data) {
+    void addAtFront(int data) {
         Node newNode = new Node();
         newNode.data = data;
 
@@ -52,7 +47,7 @@ public class DoublyLinkedList {
         }
     }
 
-    void searchElement(String element) {
+    void searchElement(int element) {
         Node newNode = new Node();
         newNode.data = element;
         Node temp = head;
@@ -62,7 +57,7 @@ public class DoublyLinkedList {
             return;
         }
         while (temp != null) {
-            if ((temp.data).equalsIgnoreCase(element)) {
+            if ((temp.data == element)) {
                 System.out.println("Element found!!");
                 System.out.println("Element was present at postion: " + count);
                 return;
@@ -77,7 +72,7 @@ public class DoublyLinkedList {
 
     }
 
-    void deleteNode(String key) {
+    void deleteNode(int key) {
         Node temp = head;
         Node curr = null;
         if (temp == null) {
@@ -145,7 +140,7 @@ public class DoublyLinkedList {
         Node left = head;
         Node right = tail;
         while (left != null && right != null) {
-            if ((left.data).equalsIgnoreCase(right.data)) {
+            if ((left.data) == (right.data)) {
                 left = left.next;
                 right = right.prev;
             } else {
@@ -154,17 +149,6 @@ public class DoublyLinkedList {
             }
         }
         System.out.println("The list is a palindrome");
-    }
-
-    public static void main(String[] args) {
-        DoublyLinkedList dList = new DoublyLinkedList();
-        dList.addAtEnd("L");
-        dList.addAtEnd("E");
-        dList.addAtEnd("o");
-        dList.addAtEnd("d");
-        dList.reverseList();
-        dList.printList();
-
     }
 
 }

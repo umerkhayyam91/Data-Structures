@@ -1,7 +1,3 @@
-class Node {
-    String data; //int datatype not working
-    Node next;
-}
 
 public class LinkedList {
     static Node start, curr, prev;
@@ -21,7 +17,7 @@ public class LinkedList {
     }
 
     // to insert a node at beginning if the list//
-    void insertAtFront(String data) {
+    void insertAtFront(int data) {
         Node nn = new Node();
         nn.data = data;
         if (isEmpty()) {
@@ -34,7 +30,7 @@ public class LinkedList {
     }
 
     // to insert a node at end if the list//
-    void insertAtEnd(String data) {
+    void insertAtEnd(int data) {
         Node nn = new Node();
         nn.data = data;
 
@@ -64,7 +60,7 @@ public class LinkedList {
     }
 
     // to delete a specific node from list//
-    void deleteNode(String key) {
+    void deleteNode(int key) {
         Node temp;
         temp = start;
         prev = null;
@@ -106,9 +102,7 @@ public class LinkedList {
 
     }
 
-    
-
-    void search(String key) {
+    void search(int key) {
         curr = start;
         prev = null;
         if (!isEmpty()) {
@@ -127,16 +121,15 @@ public class LinkedList {
         }
     }
 
-
-// main method//
-// public static void main(String[] args) {
-// LinkedList list = new LinkedList();
-// list.insertAtEnd("3");
-// list.insertAtEnd("8");
-// list.insertAtEnd("1");
-// list.insertAtEnd("2");
-// list.destroyList();
-// list.print();
-// }
+    // main method//
+    // public static void main(String[] args) {
+    // LinkedList list = new LinkedList();
+    // list.insertAtEnd("3");
+    // list.insertAtEnd("8");
+    // list.insertAtEnd("1");
+    // list.insertAtEnd("2");
+    // list.destroyList();
+    // list.print();
+    // }
 
 }
