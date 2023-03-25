@@ -56,16 +56,16 @@ public class CircularQueue {
         System.out.println("Queue underflow!!");
     }
 
-    public static void main(String[] args) {
-        CircularQueue circular = new CircularQueue();
-        circular.enQueueCir(1);
-        circular.enQueueCir(2);
-        circular.enQueueCir(3);
-        circular.enQueueCir(4);
-        circular.enQueueCir(5);
-        circular.enQueueCir(6);
-        circular.deQueueCir();
-        circular.printCir();
+//     public static void main(String[] args) {
+//         CircularQueue circular = new CircularQueue();
+//         circular.enQueueCir(1);
+//         circular.enQueueCir(2);
+//         circular.enQueueCir(3);
+//         circular.enQueueCir(4);
+//         circular.enQueueCir(5);
+//         circular.enQueueCir(6);
+//         circular.deQueueCir();
+//         circular.printCir();
 
-    }
+//     }
 }
